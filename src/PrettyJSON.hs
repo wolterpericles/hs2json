@@ -10,7 +10,7 @@ import Data.Bits (shiftR, (.&.))
 
 import SimpleJSON (JValue(..))
 import Prettify (Doc, (<>), char, double, fsep, hcat, punctuate, text,
-                 {-compact, pretty-})
+                 compact, pretty)
 
 import Prelude hiding ((<>))
 
