@@ -29,6 +29,9 @@ text s  = Text s
 double :: Double -> Doc
 double d = text (show d)
 
+line :: Doc
+line = Line
+
 (<>) :: Doc -> Doc -> Doc
 a <> b = undefined
 
