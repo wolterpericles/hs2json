@@ -42,3 +42,8 @@ simpleEscapes = zipWith ch "\b\n\f\r\t\\\"/" "bnfrt\\\"/"
 
 fsep :: [Doc] -> Doc
 fsep xs = undefined
+
+punctuate :: Doc -> [Doc] -> [Doc]
+punctuate p []     = []
+punctuate p [d]    = [d]
+punctuate p (d:ds) = (d <> p) : punctuate p ds 
