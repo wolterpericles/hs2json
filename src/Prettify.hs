@@ -15,3 +15,5 @@ text str = undefined
 double :: Double -> Doc
 double num = undefined
 
+string :: String -> Doc
+string = enclose '"' '"' . hcat . map oneChar
