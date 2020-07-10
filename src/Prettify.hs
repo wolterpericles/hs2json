@@ -16,17 +16,21 @@ data Doc = Empty
 --string :: String -> Doc
 --string str = undefined
 
+empty :: Doc
+empty = Empty
+
+char :: Char -> Doc
+char c = Char c
+
 text :: String -> Doc
-text str = undefined
+text "" = Empty
+text s  = Text s
 
 double :: Double -> Doc
-double num = undefined
+double d = text (show d)
 
 (<>) :: Doc -> Doc -> Doc
 a <> b = undefined
-
-char :: Char -> Doc
-char c = undefined
 
 hcat :: [Doc] -> Doc
 hcat xs = undefined
