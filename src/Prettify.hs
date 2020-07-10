@@ -15,7 +15,7 @@ text :: String -> Doc
 text str = undefined
 
 double :: Double -> Doc
-double num = undefinedr3
+double num = undefined
 
 (<>) :: Doc -> Doc -> Doc
 a <> b = undefined
