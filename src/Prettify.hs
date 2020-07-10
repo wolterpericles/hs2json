@@ -33,7 +33,9 @@ line :: Doc
 line = Line
 
 (<>) :: Doc -> Doc -> Doc
-a <> b = undefined
+Empty <> y = y
+x <> Empty = x
+x <> y = x `Concat` y
 
 hcat :: [Doc] -> Doc
 hcat xs = undefined
