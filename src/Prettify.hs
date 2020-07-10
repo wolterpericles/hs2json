@@ -13,9 +13,6 @@ data Doc = Empty
          | Union Doc Doc
            deriving (Show,Eq)
 
---string :: String -> Doc
---string str = undefined
-
 empty :: Doc
 empty = Empty
 
