@@ -38,7 +38,10 @@ x <> Empty = x
 x <> y = x `Concat` y
 
 hcat :: [Doc] -> Doc
-hcat xs = undefined
+hcat = fold (<>)
+
+fold :: (Doc -> Doc -> Doc) -> [Doc] -> Doc
+fold f = foldr f empty
 
 simpleEscapes :: [(Char, String)]
 simpleEscapes = zipWith ch "\b\n\f\r\t\\\"/" "bnfrt\\\"/"
