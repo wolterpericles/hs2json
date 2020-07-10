@@ -39,3 +39,6 @@ oneChar c = case lookup c simpleEscapes of
 simpleEscapes :: [(Char, String)]
 simpleEscapes = zipWith ch "\b\n\f\r\t\\\"/" "bnfrt\\\"/"
     where ch a b = (a, ['\\',b])
+
+fsep :: [Doc] -> Doc
+fsep xs = undefined
